@@ -26,14 +26,14 @@ app.use(
   })
 );
 
-app.get("/modulo", async (req, res) => {
+app.get("/modulos", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM modulo WHERE id = 1");
+    const result = await pool.query("SELECT * FROM modulo");
     console.log("Full query result:", result); // Imprime el resultado completo
     if (result.rows.length > 0) {
-      console.log("Query result:", result.rows[0]); // Imprime la primera fila del resultado
+      console.log("Query result:", result.rows); // Imprime la primera fila del resultado
       res.send(
-        result.rows[0] // Ajusta 'now' al campo correcto en tu tabla 'modulo'
+        result.rows // Ajusta 'now' al campo correcto en tu tabla 'modulo'
       );
     } else {
       res.status(404).send({ error: "No data found" });
