@@ -19,7 +19,7 @@ function MyMap() {
       style={{ height: "650px", width: "650px" }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={[20.6567129, -103.3256218]} icon={Stage}>
+      <Marker position={[20.6567129, -103.325691]} icon={Stage}>
         <Popup>
           <h1 className="text-base">Auditorio Ingeniero Jorge Matute Remus</h1>
         </Popup>
